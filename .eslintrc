@@ -23,6 +23,14 @@
     },
     "ecmaVersion": "latest"
   },
+  "overrides": [
+    {
+      "files": "./vite/**/*.+(ts|tsx)",
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ],
   "rules": {
     "import/prefer-default-export": "off",
     "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }]

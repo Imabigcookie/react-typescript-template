@@ -1,8 +1,8 @@
-import { defineConfig, mergeConfig } from 'vite'
+import { defineConfig, mergeConfig } from 'vite';
 
-import { commonConfig } from './common.config'
+import { commonConfig } from './common.config';
 
-const PORT = process.env.PORT ? Number(process.env.PORT) : 3000
+const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 const devConfig = defineConfig({
   mode: 'development',
@@ -13,15 +13,15 @@ const devConfig = defineConfig({
       '/api': {
         target: '',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
   css: {
     modules: {
-      generateScopedName: '[name]__[local]___[hash:base64:3]'
-    }
-  }
-})
+      generateScopedName: '[name]__[local]___[hash:base64:3]',
+    },
+  },
+});
 
-export default mergeConfig(commonConfig, devConfig)
+export default mergeConfig(commonConfig, devConfig);

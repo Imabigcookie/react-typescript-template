@@ -1,6 +1,6 @@
-import { defineConfig, mergeConfig } from 'vite'
+import { defineConfig, mergeConfig } from 'vite';
 
-import { commonConfig } from './common.config'
+import { commonConfig } from './common.config';
 
 const productionConfig = defineConfig({
   build: {
@@ -8,9 +8,9 @@ const productionConfig = defineConfig({
   },
   css: {
     modules: {
-      generateScopedName: '[hash:base64:3]'
-    }
-  }
-})
+      generateScopedName: '[hash:base64:3]',
+    },
+  },
+});
 
-export default mergeConfig(commonConfig, productionConfig)
+export default mergeConfig(commonConfig, productionConfig);

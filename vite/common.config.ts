@@ -1,8 +1,7 @@
+import path from 'node:path';
 
-import path from 'node:path'
-
-import react from '@vitejs/plugin-react-swc'
-import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc';
+import { defineConfig } from 'vite';
 
 export const commonConfig = defineConfig({
   plugins: [
@@ -17,8 +16,7 @@ export const commonConfig = defineConfig({
       features: path.resolve(process.cwd(), './src/features'),
       shared: path.resolve(process.cwd(), './src/shared'),
       widgets: path.resolve(process.cwd(), './src/widgets'),
-      entities: path.resolve(process.cwd(), './src/entities')
-    }
-  }
-})
-
+      entities: path.resolve(process.cwd(), './src/entities'),
+    },
+  },
+});
