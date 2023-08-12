@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "@feature-sliced"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }]
+  }
+}
